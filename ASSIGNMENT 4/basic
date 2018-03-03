@@ -1,0 +1,219 @@
+Require Import BenB.
+
+(* Domains *)
+Variable P : Set.
+  (* The set of living and dead persons. *)
+
+Definition M := R.
+  (* The set of money in euros as real numbers. *)
+
+(* If you need more domains to formalize your sentence,
+   add them here, including their meanings.
+   If you do not need them then you must add a dummy as usual.
+   'Variable V1: Set.'
+*)
+   
+Variable (*! term *):  .
+  (* Meaning: *)
+
+Variable (*! term *):  .
+  (* Meaning:  *)
+
+Variable (*! term *):  .
+  (* Meaning: *)
+
+
+(* Constants *)
+(* In this assignment it is not allowed to define constants. *)
+
+(* Functions *)
+(* In this assignment it is not allowed to define functions. *)
+
+(* Predicates *)
+Variable isMan (* x *) : P -> Prop.
+  (* Person x is a man. *)
+  (* Look it up in the municipal base administration. *)
+
+Variable isParentOf (* x y *) : P -> P -> Prop.
+  (* Person x is father or mother of person y. *)
+  (* Look it up in the municipal base administration. *)
+
+(* Here you add your own predicates to the domain model.
+   But look out: the domain model has to stay minimal.
+   This means that you are not allowed to add predicates
+   that can be expressed by using existing predicates.
+
+   For example: 'Variable isWoman : P -> Prop.' should not
+   be added since it can be expressed in terms of 'isMan'.
+   
+   Also here you need to add dummies if you need less predicates.
+   For example
+   'Variable P1 : Prop.'
+
+   ALSO ADD THE MEANING AND THE MEASUREMENT!
+*)
+Variable  (* !term*) : .
+  (* Meaning:  *)
+  (* Measurement:  *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+Variable (*! term *) .
+  (* Meaning: *)
+  (* Measurement: *)
+
+
+(* Auxiliary predicates *)
+(* Auxiliary predicates are not a part of the domain model,
+   but they are convenient abbreviations for (more) complicated formulas.
+*)
+
+Definition isWoman (p:P) :=
+  ~ isMan p.
+  (* Person p is a woman. *) 
+ 
+(* add auxiliary predicates if you like.
+
+   Add dummies if you need less auxiliary predicates.
+   For example:
+   'Definition H1 := True.'
+
+   ALSO ADD THE MEANING!
+   (Measurements are redundant so you do not need to add them.)
+*)
+
+Definition (*! term *)
+.
+  (* Meaning: *)
+  
+Definition (*! term *)
+.
+  (* Meaning: *)
+
+Definition (*! term *)
+.
+  (* Meaning: *)
+
+Definition (*! term *)
+.  
+  (* Meaning: *)
+
+Definition (*! term *)
+.
+  (* Meaning: *)
+  
+Definition (*! term *)
+.
+  (* Meaning: *)
+
+Definition (*! term *) 
+.
+  (* Meaning: *)
+
+Definition (*! term *)
+.
+  (* Meaning: *)
+  
+Definition (*! term *)
+.
+  (* Meaning: *)
+  
+Definition (*! term *)
+.
+  (* Meaning: *)
+
+(* Sentences *)
+(* The last digit of your student number indicates which sentences you have
+   to formalize.
+   
+   If the last digit of your student number is i, then you have to 
+   formalize 'sentencei' and 'sentencej' where j=i+5 (mod 5).
+
+   So if i=6 then you have to formalize sentence6 and sentence1,
+   if i=4 then sentence4 and sentence9.
+
+   For the other sentences you do need to enter a valid formula again.
+   For example
+   `Definition sentence3 := True.'
+   
+   You are of course allowed to use all entities that are defined above.
+*)
+
+Definition sentence0 := 
+(* Every man is a grandchild. *)
+(*! term *)
+.
+
+Definition sentence1 :=
+(* Every father in law is a man. *)
+(*! term *)
+.
+
+Definition sentence2 :=
+(* No man is a mother in law. *)
+(*! term *)
+.
+
+Definition sentence3 :=
+(* Every king has a brother. *)
+(*! term *)
+.
+
+Definition sentence4 :=
+(* There is exactly one queen. *)
+(*! term *)
+.
+
+Definition sentence5 :=
+(* Whoever owns a dog and a cat pays a dog tax of 106.65 euros. *)
+(* Hint: Note that 106.65 = (10665/100). *)
+(*! term *)
+.
+
+Definition sentence6 :=
+(* Only queens can own a dog without paying dog tax. *)
+(*! term *)
+.
+
+Definition sentence7 :=
+(* Whoever knows everyone, knows no one really. *)
+  (* What do you think is actually meant here? *)
+(*! term *)
+.
+
+Definition sentence8:=
+(* A brother is not a sister. *)
+(*! term *)
+.
+
+Definition sentence9 :=
+(* A king has a minimum of three daughters. *)
+(*! term *)
+.
+
