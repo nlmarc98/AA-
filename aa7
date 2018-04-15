@@ -1,0 +1,116 @@
+Require Import BenB.
+
+(* Domains *)
+Variable P: Set.
+  (* The set of all living and dead people. *)
+Definition T := R.
+  (* Time as minutes in real numbers. *)
+
+(* Predicates *)
+Variable isMan (* x *) : P -> Prop.
+  (* x is a man *)
+  (* Look it up in the municipal base administration. *)
+
+Variable isParentOf (* x y *) : P -> P -> Prop.
+  (* x is a parent of y. *)
+  (* Look it up in the municipal base administration. *)
+
+Variable isBornAt (* x t *) : P -> T -> Prop.
+  (* x is born at time t. *)
+  (* Check it at the general register office. *)
+
+Variable diesAt (* x t *) : P -> T -> Prop.
+  (* x dies at time t. *)
+  (* Check it on the death certificate. *)
+
+Variable marriesToAt (* x y t *): P -> P -> T -> Prop.
+  (* x marries to y at time t *)
+  (* Check it in the wedding registry. *)
+  
+(*
+   You are not allowed to adapt anything above;
+   you have to use this domain model to formalize 
+   the auxiliary predicates (and if needed, the 
+   auxiliary auxiliary predicates) below as good as
+   possible.
+*)
+
+(* Auxiliary auxiliary predicates *)
+(* These definitions are only here for people who like to use
+   the systematic translation method.
+
+   If you do not use them then replace them by dummies, like
+   Definition HH1 := True.
+*)
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+Definition (*! term *)
+.
+
+
+(* Auxiliary predicates *)
+(*
+   Create definitions for the following auxiliary predicates
+   within this domain model.
+
+   Your student number determines which definitions you have to
+   do. The other definitions have to be adapted in the usual
+   way to allow Coq to accept your solution.
+  
+   The desired meaning is given between commentary marks.
+
+   You cannot change the types of the auxiliary predicates.
+
+   You can however use (auxiliary) predicates that we used before.
+
+   Make sure that the layout of the formulas matches their mathematical
+   structures.
+*)
+
+Definition isAliveAt (x:P) (t:T) :=
+  (* Person x is alive at time t. *)
+  (*! term *)
+.
+
+Definition isWidowAt (x:P) (t:T) :=
+  (* Person x is a widow at time t. *)
+  (*! term *)
+.
+
+Definition areTwins (x:P) (y:P) :=
+  (* Person x and person y are twins. *)
+  (*! term *)
+.
+  
+Definition isOldestChildOf (x:P) (y:P) :=
+  (* x is the oldest child of y. *)
+  (*! term *)
+.
+
+
